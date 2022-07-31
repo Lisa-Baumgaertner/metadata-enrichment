@@ -34,7 +34,7 @@ in the case of wanting to run on **linguistically annotated** corpus file use: <
 - the pywikibot requires configuration and username and password to the Wikidata site, a guide can be found [here](https://www.wikidata.org/wiki/Wikidata:Pywikibot_-_Python_3_Tutorial/Setting_up_Shop)
 
 running the person_bot.py: <br/>
-either in the pywikibot **core** folder, with the person_bot.py file and the ParlaMint-XX-languagecode.txt (this file is created in xmltree.py) copied into the core directory <br/>
+In the **pywikibot** **core** folder, with the person_bot.py file and the ParlaMint-XX-languagecode.txt (this file is created in xmltree.py) copied into the core directory <br/>
 `python person_bot.py --infile ParlaMint-XX-nowikiid_xx.txt`
 
 

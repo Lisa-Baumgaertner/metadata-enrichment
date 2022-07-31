@@ -1,4 +1,4 @@
-# metadata-enrichment
+# About
 
 In previous years there have been many corpora of parliamentary proceedings created. One of the most extensive projects, covering a wide range of languages and European parliaments , is the ParlaMint project (Erjavec et al., 2022). The corpora of this project share a uniform encoding and already include metadata, which is not yet equally rich across the individual corpora.
 This thesis seeks to investigate, if an automated process for enriching the missing corpus metadata with the help of the knowledge base Wikidata is viable. 

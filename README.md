@@ -7,9 +7,9 @@ The first form of cross-checking includes adding pages on the knowledge base, fo
 The second form of cross-checking entails a comparison of corpus data to data from the knowledge base, to check the data for inconsistencies. This is performed on the corpus metadata pre-enrichment. The differences are noted and visualized using a XSLT stylesheet, where they can be accessed and used further for manual corrections.
 
 # General
-code folder: contains the programs for the three parts of my thesis.
-input folder: contains the corpus files of the ParlaMint project for easier access when testing the code.
-output folder: contains the output/ the ParlaMint corpora after running the enrichment program on them.
+code folder: contains the programs for the three parts of my thesis.  <br />
+input folder: contains the corpus files of the ParlaMint project for easier access when testing the code.  <br />
+output folder: contains the output/ the ParlaMint corpora after running the enrichment program on them.  <br />
 
 # Metadata Enrichment
 

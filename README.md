@@ -13,16 +13,17 @@ The second form of cross-checking entails a comparison of corpus data to data fr
 **validation** folder: contains the RelaxNG validation files of the ParlaMint project for easy access.
 
 # Metadata Enrichment
+- file in 'code' folder called: **xmltree.py** <br/>
 - requires python [SPARQLWrapper](https://github.com/RDFLib/sparqlwrapper) and [xml.etree.ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html) <br/>
 - requires [jing](https://relaxng.org/jclark/jing.html) for the validation <br/>
 
 call on command line with:
 `python xmltree.py --infile ParlaMint-XX.xml --validation ParlaMint-teiCorpus.rng`
-
-if parameter **--outfile** is not specified the enriched corpus file is automatically written to a file named: ParlaMint-XX_out.xml
+where **--outfile** parameter is optional.
+if parameter **--outfile** is not specified the enriched corpus file is automatically written to a file named: **ParlaMint-XX_out.xml**
 
 in the case of wanting to run on **linguistically annotated** corpus file use: <br/>
-`python xmltree.py --infile ParlaMint-XX.`**ana**`.xml --validation ParlaMint-teiCorpus.`**ana**`.rng`
+`python xmltree.py --infile ParlaMint-XX.ana.xml --validation ParlaMint-teiCorpus.ana.rng`
 
 - if all used files are not contained in the same directory, full paths are required.
 
@@ -30,3 +31,9 @@ in the case of wanting to run on **linguistically annotated** corpus file use: <
 
 
 # List of Differences
+- file in 'code' folder called: **differencesxml.py**
+- requires python [SPARQLWrapper](https://github.com/RDFLib/sparqlwrapper) and [xml.etree.ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html) <br/>
+
+call from command line using: `python differencesxml.py --infile ParlaMint-XX.xml --outfile outfile.xml --style difflist.xslt` <br/>
+where all parameters are required to run the program. <br/>
+**outfile.xml** can be named however the user wants, but should have **.xml** extension.

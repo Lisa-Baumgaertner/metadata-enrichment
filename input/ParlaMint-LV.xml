@@ -1,0 +1,2595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xml:lang="lv" xml:id="ParlaMint-LV">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main" xml:lang="lv">Latvijas parlamenta corpus ParlaMint-LV [ParlaMint]</title>
+            <title type="main" xml:lang="en">Latvian parliamentary corpus ParlaMint-LV [ParlaMint]</title>
+            <meeting n="12" corresp="#PT" ana="#parla.term #PT.12">12. Saeima</meeting>
+            <meeting n="13" corresp="#PT" ana="#parla.term #PT.13">13. Saeima</meeting>
+            <respStmt>
+               <persName>Roberts Darģis</persName>
+               <resp xml:lang="lv">Parla-CLARIN TEI XML korpusa sagatavošana</resp>
+               <resp xml:lang="en">Parla-CLARIN TEI XML corpus encoding</resp>
+            </respStmt>
+            <funder>
+               <orgName xml:lang="lv">CLARIN pētniecības infrastruktūra</orgName>
+               <orgName xml:lang="en">The CLARIN research infrastructure</orgName>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>2.1</edition>
+         </editionStmt>
+         <extent>
+            <measure unit="speeches" quantity="122136" xml:lang="en">122,136 speeches</measure>
+            <measure unit="words" quantity="6482479" xml:lang="en">6,482,479 words</measure>
+            <measure unit="tokens" quantity="8173038" xml:lang="en">8173038 tokens</measure>
+         </extent>
+         <publicationStmt>
+            <publisher>
+               <orgName xml:lang="lv">CLARIN pētniecības infrastruktūra</orgName>
+               <orgName xml:lang="en">CLARIN research infrastructure</orgName>
+               <ref target="https://www.clarin.eu/">www.clarin.eu</ref>
+            </publisher>
+            <idno subtype="handle" type="URI">http://hdl.handle.net/11356/1432</idno>
+            <availability status="free">
+               <licence>http://creativecommons.org/licenses/by/4.0/</licence>
+               <p xml:lang="en">This work is licensed under the <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref>.</p>
+            </availability>
+            <date when="2021-06-10">June 10, 2021</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title type="main" xml:lang="lv">Latvijas Republikas Saeimas stenogrammu korpuss</title>
+               <title type="main" xml:lang="en">The Corpus of Parliament of Latvia [ParlaMint-LV]</title>
+               <idno type="URI">https://www.saeima.lv/</idno>
+               <date from="1993-07-06" to="2020-12-21">06.07.1993 - 21.12.2020</date>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p xml:lang="lv"><ref target="https://www.clarin.eu/content/parlamint">ParlaMint</ref>
+            </p>
+            <p xml:lang="en"><ref target="https://www.clarin.eu/content/parlamint">ParlaMint</ref> is a project that aims to (1) create a multilingual set of comparable corpora of parliamentary proceedings uniformly encoded according to the <ref target="https://github.com/clarin-eric/parla-clarin">Parla-CLARIN recommendations</ref> and covering the COVID-19 pandemic from November 2019 as well as the earlier period from 2015 to serve as a reference corpus; (2) process the corpora linguistically to add Universal Dependencies syntactic structures and Named Entity annotation; (3) make the corpora available through concordancers and Parlameter; and (4) build use cases in Political Sciences and Digital Humanities based on the corpus data.</p>
+         </projectDesc>
+         <editorialDecl>
+            <correction>
+               <p xml:lang="en">No correction of source texts was performed.</p>
+            </correction>
+            <normalization>
+               <p xml:lang="en">Text has not been normalised, except for spacing.</p>
+            </normalization>
+            <hyphenation>
+               <p xml:lang="en">No end-of-line hyphens were present in the source.</p>
+            </hyphenation>
+            <quotation>
+               <p xml:lang="en">Quotation marks have been left in the text and are not explicitly marked up.</p>
+            </quotation>
+            <segmentation>
+               <p xml:lang="en">The texts are segmented into utterances (speeches) and segments (corresponding to paragraphs in the source transcription).</p>
+            </segmentation>
+         </editorialDecl>
+         <tagsDecl>
+            <namespace name="http://www.tei-c.org/ns/1.0">
+               <tagUsage gi="body" occurs="419"/>
+               <tagUsage gi="div" occurs="419"/>
+               <tagUsage gi="head" occurs="838"/>
+               <tagUsage gi="note" occurs="122136"/>
+               <tagUsage gi="seg" occurs="268340"/>
+               <tagUsage gi="text" occurs="419"/>
+               <tagUsage gi="u" occurs="122136"/>
+            </namespace>
+         </tagsDecl>
+         <classDecl>
+            <taxonomy xml:id="parla.legislature">
+               <desc xml:lang="lv"><term>Likumdevējs</term></desc>
+               <desc xml:lang="en"><term>Legislature</term></desc>
+               <category xml:id="parla.organization">
+                  <catDesc xml:lang="lv"><term>Struktūra</term></catDesc>
+                  <catDesc xml:lang="en"><term>Organization</term></catDesc>
+                  <category xml:id="parla.chambers">
+                     <catDesc xml:lang="lv"><term>Palātas</term></catDesc>
+                     <catDesc xml:lang="en"><term>Chambers</term></catDesc>
+                     <category xml:id="parla.uni">
+                        <catDesc xml:lang="lv"><term>Vienpalātas</term></catDesc>
+                        <catDesc xml:lang="en"><term>Unicameralism</term></catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="parla.term">
+                  <catDesc xml:lang="lv"><term>Parlamentārais sasaukums</term></catDesc>
+                  <catDesc xml:lang="en"><term>Legislative period</term>: term of the parliament between general elections.</catDesc>
+                  <category xml:id="parla.session">
+                     <catDesc xml:lang="lv"><term>Parlamentārā sesija</term></catDesc>
+                     <catDesc xml:lang="en"><term>Legislative session</term>: the period of time in which a legislature is convened for purpose of lawmaking, usually being one of two or more smaller divisions of the entire time between two elections. A session is a meeting or series of connected meetings devoted to a single order of business, program, agenda, or announced purpose.</catDesc>
+                     <category xml:id="parla.meeting">
+                        <catDesc xml:lang="lv"><term>Sēde</term></catDesc>
+                        <catDesc xml:lang="en"><term>Meeting</term>: Each meeting may be a separate session or part of a group of meetings constituting a session. The session/meeting may take one or more days.</catDesc>
+                        <category xml:id="parla.meeting-types">
+                           <catDesc xml:lang="lv"><term>Sēdžu tipi</term></catDesc>
+                           <catDesc xml:lang="en"><term>Types of meetings</term></catDesc>
+                           <category xml:id="parla.meeting.regular">
+                              <catDesc xml:lang="lv"><term>Regulārā sēde</term></catDesc>
+                              <catDesc xml:lang="en"><term>Regular meeting</term></catDesc>
+                           </category>
+                           <category xml:id="parla.meeting.special">
+                              <catDesc xml:lang="lv"><term>Īpašās sēdes</term></catDesc>
+                              <catDesc xml:lang="en"><term>Special meeting</term></catDesc>
+                              <category xml:id="parla.meeting.urgent">
+                                 <catDesc xml:lang="lv"><term>Ārkārtas sēde</term></catDesc>
+                                 <catDesc xml:lang="en"><term>Urgent meeting</term></catDesc>
+                              </category>
+                              <category xml:id="parla.meeting.ceremonial">
+                                 <catDesc xml:lang="lv"><term>Svinīgā sēde</term></catDesc>
+                                 <catDesc xml:lang="en"><term>Ceremonial meeting</term></catDesc>
+                              </category>
+                           </category>
+                           <category xml:id="parla.meeting.continued">
+                              <catDesc xml:lang="lv"><term>Sēdes turpinājums</term></catDesc>
+                              <catDesc xml:lang="en"><term>Continued meeting</term></catDesc>
+                           </category>
+                           <category xml:id="parla.meeting.public">
+                              <catDesc xml:lang="lv"><term>Publiska sēde</term></catDesc>
+                              <catDesc xml:lang="en"><term>Public meeting</term></catDesc>
+                           </category>
+                           <category xml:id="parla.meeting.executive">
+                              <catDesc xml:lang="lv"><term>Slēgta sēde</term></catDesc>
+                              <catDesc xml:lang="en"><term>Executive meeting</term></catDesc>
+                           </category>
+                        </category>
+                        <category xml:id="parla.sitting">
+                           <catDesc xml:lang="lv"><term>Sēde</term></catDesc>
+                           <catDesc xml:lang="en"><term>Sitting</term></catDesc>
+                        </category>
+                     </category>
+                  </category>
+               </category>
+            </taxonomy>
+            <taxonomy xml:id="speaker_types">
+               <desc xml:lang="en"><term>Types of speakers</term></desc>
+               <desc xml:lang="lv"><term>Runātāju tipi</term></desc>
+               <category xml:id="chair">
+                  <catDesc xml:lang="lv"><term>Priekššedētājs</term>: Saeimas priekšsēdētājs</catDesc>
+                  <catDesc xml:lang="en"><term>Chairperson</term>: chairman of a meeting</catDesc>
+               </category>
+               <category xml:id="regular">
+                  <catDesc xml:lang="lv"><term>Deputāts</term>: Saeimas deputāts</catDesc>
+                  <catDesc xml:lang="en"><term>Regular</term>: a regular speaker at a meeting</catDesc>
+               </category>
+               <category xml:id="guest">
+                  <catDesc xml:lang="lv"><term>Viesis</term>: viesis Saeimas sēdē</catDesc>
+                  <catDesc xml:lang="en"><term>Guest</term>: a guest speaker at a meeting</catDesc>
+               </category>
+            </taxonomy>
+            <taxonomy xml:id="subcorpus">
+               <desc xml:lang="lv"><term>Apakškorpusi</term></desc>
+               <desc xml:lang="en"><term>Subcorpora</term></desc>
+               <category xml:id="reference">
+                  <catDesc xml:lang="lv"><term>References</term>: references apakškorpuss, līdz 2019-10-31</catDesc>
+                  <catDesc xml:lang="en"><term>Reference</term>: reference subcorpus, until 2019-10-31</catDesc>
+               </category>
+               <category xml:id="covid">
+                  <catDesc xml:lang="lv"><term>COVID</term>: COVID apakškorpuss, no 2019-11-01</catDesc>
+                  <catDesc xml:lang="en"><term>COVID</term>: COVID subcorpus, from 2019-11-01 onwards</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <settingDesc>
+            <setting>
+               <name type="address">Jēkaba ielā 11</name>
+               <name type="city">Rīga</name>
+               <name type="country" key="LV">Latvija</name>
+               <date from="1993-07-06" to="2020-12-21">06.07.1993 - 21.12.2020</date>
+            </setting>
+         </settingDesc>
+         <textClass>
+            <catRef scheme="#parla.legislature" target="#parla.uni"/>
+         </textClass>
+         <particDesc>
+            <listOrg>
+               <org xml:id="government.LV" role="government">
+                  <orgName xml:lang="en" full="yes">Latvian Government</orgName>
+               </org>
+               <org xml:id="PT" role="parliament" ana="#parla.uni">
+                  <orgName xml:lang="lv" full="yes">Latvijas Republikas Saeima</orgName>
+                  <orgName xml:lang="en" full="yes">Saeima of the Republic of Latvia</orgName>
+                  <idno type="wikimedia" xml:lang="lv">https://lv.wikipedia.org/wiki/Saeima</idno>
+                  <idno type="wikimedia" xml:lang="en">https://en.wikipedia.org/wiki/Saeima</idno>
+                  <listEvent>
+                     <head xml:lang="lv">Saeimas sasaukumi</head>
+                     <head xml:lang="en">Legislative period</head>
+                     <event xml:id="PT.12" from="2014-11-04" to="2018-11-05">
+                        <label xml:lang="lv">12. Saeima</label>
+                        <label xml:lang="en">Term 12</label>
+                     </event>
+                     <event xml:id="PT.13" from="2018-11-06">
+                        <label xml:lang="lv">13. Saeima</label>
+                        <label xml:lang="en">Term 13</label>
+                     </event>
+                  </listEvent>
+               </org>
+               <org xml:id="group.AP" role="politicalGroup">
+                  <orgName full="yes">Attīstībai/Par!</orgName>
+                  <orgName full="init">AP</orgName>
+               </org>
+               <org xml:id="group.NA" role="politicalGroup">
+                  <orgName full="yes">Nacionālā apvienība "Visu Latvijai!"–"Tēvzemei un Brīvībai/LNNK"</orgName>
+                  <orgName full="init">NA</orgName>
+               </org>
+               <org xml:id="group.JV" role="politicalGroup">
+                  <orgName full="yes">JAUNĀ VIENOTĪBA</orgName>
+                  <orgName full="init">JV</orgName>
+               </org>
+               <org xml:id="group.JK" role="politicalGroup">
+                  <orgName full="yes">Jaunā konservatīvā</orgName>
+                  <orgName full="init">JK</orgName>
+               </org>
+               <org xml:id="group.SASKAŅA" role="politicalGroup">
+                  <orgName full="yes">SASKAŅA</orgName>
+                  <orgName full="init">SASKAŅA</orgName>
+               </org>
+               <org xml:id="group.KPV-LV" role="politicalGroup">
+                  <orgName full="yes">Kam pieder valsts?</orgName>
+                  <orgName full="init">KPV-LV</orgName>
+               </org>
+               <org xml:id="group.ZZS" role="politicalGroup">
+                  <orgName full="yes">Zaļo un Zemnieku savienība</orgName>
+                  <orgName full="init">ZZS</orgName>
+               </org>
+               <org xml:id="group.SAKAŅA" role="politicalGroup">
+                  <orgName full="yes">SAKAŅA</orgName>
+                  <orgName full="init">SAKAŅA</orgName>
+               </org>
+               <org xml:id="group.VIENOTĪBA" role="politicalGroup">
+                  <orgName full="yes">VIENOTĪBA</orgName>
+                  <orgName full="init">VIENOTĪBA</orgName>
+               </org>
+               <org xml:id="group.LRA" role="politicalGroup">
+                  <orgName full="yes">Latvijas Reģionu apvienība</orgName>
+                  <orgName full="init">LRA</orgName>
+               </org>
+               <org xml:id="group.NSL" role="politicalGroup">
+                  <orgName full="yes">No sirds Latvijai</orgName>
+                  <orgName full="init">NSL</orgName>
+               </org>
+            </listOrg>
+            <listPerson>
+               <head xml:lang="lv">Runātāju saraksts</head>
+               <head xml:lang="en">List of speakers</head>
+               <person xml:id="GraužiņieneLoreta">
+                  <persName>
+                     <surname>Graužiņiene</surname>
+                     <forename>Loreta</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+               </person>
+               <person xml:id="ZariņšIvars">
+                  <persName>
+                     <surname>Zariņš</surname>
+                     <forename>Ivars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="member" to="2021-02-04"/>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="BiteInga">
+                  <persName>
+                     <surname>Bite</surname>
+                     <forename>Inga</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+               </person>
+               <person xml:id="Beitnere-LeGallaDagmāra">
+                  <persName>
+                     <surname>Beitnere-Le Galla</surname>
+                     <forename>Dagmāra</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-12-06" ref="#group.JK" role="member" to="2021-01-28"/>
+                  <affiliation from="2018-12-06" ref="#group.JK" role="MP" to="2021-01-28"/>
+               </person>
+               <person xml:id="LoskutovsAleksejs">
+                  <persName>
+                     <surname>Loskutovs</surname>
+                     <forename>Aleksejs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-27" ref="#group.VIENOTĪBA" role="member" to="2018-09-27"/>
+                  <affiliation from="2014-11-27" ref="#group.VIENOTĪBA" role="MP" to="2018-09-27"/>
+               </person>
+               <person xml:id="DolgopolovsSergejs">
+                  <persName>
+                     <surname>Dolgopolovs</surname>
+                     <forename>Sergejs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="member" to="2021-02-04"/>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="ŠadurskisKārlis">
+                  <persName>
+                     <surname>Šadurskis</surname>
+                     <forename>Kārlis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-13" ref="#group.VIENOTĪBA" role="member" to="2016-02-11"/>
+                  <affiliation from="2014-11-13" ref="#group.VIENOTĪBA" role="MP" to="2016-02-11"/>
+               </person>
+               <person xml:id="BondarsMārtiņš">
+                  <persName>
+                     <surname>Bondars</surname>
+                     <forename>Mārtiņš</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-11-13" ref="#group.AP" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-11-13" ref="#group.AP" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="KolsRihards">
+                  <persName>
+                     <surname>Kols</surname>
+                     <forename>Rihards</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-01-22" ref="#group.NA" role="member" to="2021-02-04"/>
+                  <affiliation from="2015-01-22" ref="#group.NA" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="BoķisInesis">
+                  <persName>
+                     <surname>Boķis</surname>
+                     <forename>Inesis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-27" ref="#group.VIENOTĪBA" role="member" to="2017-07-21"/>
+                  <affiliation from="2014-11-27" ref="#group.VIENOTĪBA" role="MP" to="2017-07-21"/>
+               </person>
+               <person xml:id="StaķisMārtiņš">
+                  <persName>
+                     <surname>Staķis</surname>
+                     <forename>Mārtiņš</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-11-22" ref="#group.AP" role="member" to="2020-05-14"/>
+                  <affiliation from="2018-11-22" ref="#group.AP" role="MP" to="2020-05-14"/>
+               </person>
+               <person xml:id="SiliņšAndris">
+                  <persName>
+                     <surname>Siliņš</surname>
+                     <forename>Andris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.ZZS" role="member" to="2017-02-16"/>
+                  <affiliation from="2014-11-05" ref="#group.ZZS" role="MP" to="2017-02-16"/>
+               </person>
+               <person xml:id="ŠvecovaĻubova">
+                  <persName>
+                     <surname>Švecova</surname>
+                     <forename>Ļubova</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-12-06" ref="#group.SASKAŅA" role="member" to="2020-09-17"/>
+                  <affiliation from="2018-12-06" ref="#group.SASKAŅA" role="MP" to="2020-09-17"/>
+                  <affiliation from="2020-11-27" ref="#group.SASKAŅA" role="member" to="2020-11-27"/>
+                  <affiliation from="2020-11-27" ref="#group.SASKAŅA" role="MP" to="2020-11-27"/>
+               </person>
+               <person xml:id="Ločmele-LuņovaRegīna">
+                  <persName>
+                     <surname>Ločmele-Luņova</surname>
+                     <forename>Regīna</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="member" to="2020-09-24"/>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="MP" to="2020-09-24"/>
+               </person>
+               <person xml:id="ZemļinskisMihails">
+                  <persName>
+                     <surname>Zemļinskis</surname>
+                     <forename>Mihails</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-12-18" ref="#group.SASKAŅA" role="member" to="2017-03-02"/>
+                  <affiliation from="2014-12-18" ref="#group.SASKAŅA" role="MP" to="2017-03-02"/>
+               </person>
+               <person xml:id="VectirānsJuris">
+                  <persName>
+                     <surname>Vectirāns</surname>
+                     <forename>Juris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-01-29" ref="#group.ZZS" role="member" to="2018-09-20"/>
+                  <affiliation from="2015-01-29" ref="#group.ZZS" role="MP" to="2018-09-20"/>
+               </person>
+               <person xml:id="Hadsona-DīnaŠarona">
+                  <persName>
+                     <surname>Hadsona-Dīna</surname>
+                     <forename>Šarona</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+               </person>
+               <person xml:id="EglītsJānis">
+                  <persName>
+                     <surname>Eglīts</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="PimenovsIgors">
+                  <persName>
+                     <surname>Pimenovs</surname>
+                     <forename>Igors</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="member" to="2021-02-04"/>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="DālderisInts">
+                  <persName>
+                     <surname>Dālderis</surname>
+                     <forename>Ints</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-27" ref="#group.VIENOTĪBA" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-11-27" ref="#group.VIENOTĪBA" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="DambeValters">
+                  <persName>
+                     <surname>Dambe</surname>
+                     <forename>Valters</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-04-30" ref="#group.ZZS" role="member" to="2018-10-11"/>
+                  <affiliation from="2015-04-30" ref="#group.ZZS" role="MP" to="2018-10-11"/>
+               </person>
+               <person xml:id="LatkovskisAinars">
+                  <persName>
+                     <surname>Latkovskis</surname>
+                     <forename>Ainars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-04" ref="#group.VIENOTĪBA" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-11-04" ref="#group.VIENOTĪBA" role="MP" to="2018-11-01"/>
+                  <affiliation from="2018-11-29" ref="#group.JV" role="member" to="2020-12-21"/>
+                  <affiliation from="2018-11-29" ref="#group.JV" role="MP" to="2020-12-21"/>
+               </person>
+               <person xml:id="ŠnoreEdvīns">
+                  <persName>
+                     <surname>Šnore</surname>
+                     <forename>Edvīns</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-20" ref="#group.NA" role="member" to="2020-12-03"/>
+                  <affiliation from="2014-11-20" ref="#group.NA" role="MP" to="2020-12-03"/>
+               </person>
+               <person xml:id="RuksJānis">
+                  <persName>
+                     <surname>Ruks</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="MežulisAinārs">
+                  <persName>
+                     <surname>Mežulis</surname>
+                     <forename>Ainārs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-02-19" ref="#group.ZZS" role="member" to="2018-04-12"/>
+                  <affiliation from="2015-02-19" ref="#group.ZZS" role="MP" to="2018-04-12"/>
+               </person>
+               <person xml:id="KrūmiņšVaris">
+                  <persName>
+                     <surname>Krūmiņš</surname>
+                     <forename>Varis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="ĀboltiņaSolvita">
+                  <persName>
+                     <surname>Āboltiņa</surname>
+                     <forename>Solvita</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2014-11-27" ref="#group.VIENOTĪBA" role="member" to="2017-11-23"/>
+                  <affiliation from="2014-11-27" ref="#group.VIENOTĪBA" role="MP" to="2017-11-23"/>
+               </person>
+               <person xml:id="KalniņšGuntis">
+                  <persName>
+                     <surname>Kalniņš</surname>
+                     <forename>Guntis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2016-01-14" ref="#group.ZZS" role="member" to="2018-04-12"/>
+                  <affiliation from="2016-01-14" ref="#group.ZZS" role="MP" to="2018-04-12"/>
+               </person>
+               <person xml:id="ŠicsMārtiņš">
+                  <persName>
+                     <surname>Šics</surname>
+                     <forename>Mārtiņš</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="TretjakaZenta">
+                  <persName>
+                     <surname>Tretjaka</surname>
+                     <forename>Zenta</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2015-02-19" ref="#group.SASKAŅA" role="member" to="2018-11-01"/>
+                  <affiliation from="2015-02-19" ref="#group.SASKAŅA" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="UlmeArvīds">
+                  <persName>
+                     <surname>Ulme</surname>
+                     <forename>Arvīds</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-09-20" ref="#group.ZZS" role="member" to="2018-11-01"/>
+                  <affiliation from="2018-09-20" ref="#group.ZZS" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="StrīķeJuta">
+                  <persName>
+                     <surname>Strīķe</surname>
+                     <forename>Juta</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-11-13" ref="#group.JK" role="member" to="2020-03-06"/>
+                  <affiliation from="2018-11-13" ref="#group.JK" role="MP" to="2020-03-06"/>
+               </person>
+               <person xml:id="RubiksRaimonds">
+                  <persName>
+                     <surname>Rubiks</surname>
+                     <forename>Raimonds</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2016-02-25" ref="#group.SASKAŅA" role="member" to="2017-01-26"/>
+                  <affiliation from="2016-02-25" ref="#group.SASKAŅA" role="MP" to="2017-01-26"/>
+               </person>
+               <person xml:id="RībenaInguna">
+                  <persName>
+                     <surname>Rībena</surname>
+                     <forename>Inguna</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2015-04-23" ref="#group.NA" role="member" to="2019-01-31"/>
+                  <affiliation from="2015-04-23" ref="#group.NA" role="MP" to="2019-01-31"/>
+               </person>
+               <person xml:id="BluķeDace">
+                  <persName>
+                     <surname>Bluķe</surname>
+                     <forename>Dace</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2019-02-14" ref="#group.AP" role="member" to="2020-11-05"/>
+                  <affiliation from="2019-02-14" ref="#group.AP" role="MP" to="2020-11-05"/>
+               </person>
+               <person xml:id="MedneLinda">
+                  <persName>
+                     <surname>Medne</surname>
+                     <forename>Linda</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2021-01-14" ref="#group.JK" role="member" to="2021-01-28"/>
+                  <affiliation from="2021-01-14" ref="#group.JK" role="MP" to="2021-01-28"/>
+               </person>
+               <person xml:id="BalodisRingolds">
+                  <persName>
+                     <surname>Balodis</surname>
+                     <forename>Ringolds</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="RubiksArtūrs">
+                  <persName>
+                     <surname>Rubiks</surname>
+                     <forename>Artūrs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-27" ref="#group.SASKAŅA" role="member" to="2021-01-21"/>
+                  <affiliation from="2014-11-27" ref="#group.SASKAŅA" role="MP" to="2021-01-21"/>
+               </person>
+               <person xml:id="AugulisUldis">
+                  <persName>
+                     <surname>Augulis</surname>
+                     <forename>Uldis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2019-01-24" ref="#group.ZZS" role="member" to="2021-01-14"/>
+                  <affiliation from="2019-01-24" ref="#group.ZZS" role="MP" to="2021-01-14"/>
+               </person>
+               <person xml:id="ŠuplinskaIlga">
+                  <persName>
+                     <surname>Šuplinska</surname>
+                     <forename>Ilga</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-12-06" ref="#group.JK" role="member" to="2018-12-06"/>
+                  <affiliation from="2018-12-06" ref="#group.JK" role="MP" to="2018-12-06"/>
+               </person>
+               <person xml:id="ZakatistovsAtis">
+                  <persName>
+                     <surname>Zakatistovs</surname>
+                     <forename>Atis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-11-29" ref="#group.KPV-LV" role="member" to="2020-10-16"/>
+                  <affiliation from="2018-11-29" ref="#group.KPV-LV" role="MP" to="2020-10-16"/>
+               </person>
+               <person xml:id="AbuMeriHosams1974">
+                  <persName>
+                     <surname>Abu Meri</surname>
+                     <forename>Hosams</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-01-15" ref="#group.VIENOTĪBA" role="member" to="2018-11-01"/>
+                  <affiliation from="2015-01-15" ref="#group.VIENOTĪBA" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="BrigmanisAugusts">
+                  <persName>
+                     <surname>Brigmanis</surname>
+                     <forename>Augusts</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-12-17" ref="#group.ZZS" role="member" to="2018-10-04"/>
+                  <affiliation from="2014-12-17" ref="#group.ZZS" role="MP" to="2018-10-04"/>
+               </person>
+               <person xml:id="KrauzeArmands">
+                  <persName>
+                     <surname>Krauze</surname>
+                     <forename>Armands</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-13" ref="#group.ZZS" role="member" to="2021-01-21"/>
+                  <affiliation from="2014-11-13" ref="#group.ZZS" role="MP" to="2021-01-21"/>
+               </person>
+               <person xml:id="BrīversIvars">
+                  <persName>
+                     <surname>Brīvers</surname>
+                     <forename>Ivars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="SkujiņšValdis">
+                  <persName>
+                     <surname>Skujiņš</surname>
+                     <forename>Valdis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-05-28" ref="#group.ZZS" role="member" to="2018-10-25"/>
+                  <affiliation from="2015-05-28" ref="#group.ZZS" role="MP" to="2018-10-25"/>
+               </person>
+               <person xml:id="GustovskisArtis">
+                  <persName>
+                     <surname>Gustovskis</surname>
+                     <forename>Artis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-03-08" ref="#group.VIENOTĪBA" role="member" to="2018-11-01"/>
+                  <affiliation from="2018-03-08" ref="#group.VIENOTĪBA" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="JudinsAndrejs">
+                  <persName>
+                     <surname>Judins</surname>
+                     <forename>Andrejs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-13" ref="#group.VIENOTĪBA" role="member" to="2018-10-25"/>
+                  <affiliation from="2014-11-13" ref="#group.VIENOTĪBA" role="MP" to="2018-10-25"/>
+                  <affiliation from="2018-11-22" ref="#group.JV" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-11-22" ref="#group.JV" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="PanteļējevsAndrejs">
+                  <persName>
+                     <surname>Panteļējevs</surname>
+                     <forename>Andrejs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="PucensĒriks">
+                  <persName>
+                     <surname>Pucens</surname>
+                     <forename>Ēriks</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-12-20" ref="#group.KPV-LV" role="member" to="2021-01-21"/>
+                  <affiliation from="2018-12-20" ref="#group.KPV-LV" role="MP" to="2021-01-21"/>
+               </person>
+               <person xml:id="Kalniņa-LukaševicaZanda">
+                  <persName>
+                     <surname>Kalniņa-Lukaševica</surname>
+                     <forename>Zanda</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+               </person>
+               <person xml:id="PapuleEvija">
+                  <persName>
+                     <surname>Papule</surname>
+                     <forename>Evija</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2019-01-23" ref="#group.SASKAŅA" role="member" to="2020-09-24"/>
+                  <affiliation from="2019-01-23" ref="#group.SASKAŅA" role="MP" to="2020-09-24"/>
+               </person>
+               <person xml:id="PabriksArtis">
+                  <persName>
+                     <surname>Pabriks</surname>
+                     <forename>Artis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="BļodnieceBaiba">
+                  <persName>
+                     <surname>Bļodniece</surname>
+                     <forename>Baiba</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+               </person>
+               <person xml:id="OrlovsVitālijs">
+                  <persName>
+                     <surname>Orlovs</surname>
+                     <forename>Vitālijs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-20" ref="#group.SASKAŅA" role="member" to="2021-01-21"/>
+                  <affiliation from="2014-11-20" ref="#group.SASKAŅA" role="MP" to="2021-01-21"/>
+               </person>
+               <person xml:id="CilevičsBoriss">
+                  <persName>
+                     <surname>Cilevičs</surname>
+                     <forename>Boriss</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="member" to="2021-01-21"/>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="MP" to="2021-01-21"/>
+               </person>
+               <person xml:id="SpolītisVeiko">
+                  <persName>
+                     <surname>Spolītis</surname>
+                     <forename>Veiko</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-27" ref="#group.VIENOTĪBA" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-11-27" ref="#group.VIENOTĪBA" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="BelēvičsGuntis">
+                  <persName>
+                     <surname>Belēvičs</surname>
+                     <forename>Guntis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-12-18" ref="#group.ZZS" role="member" to="2016-01-21"/>
+                  <affiliation from="2014-12-18" ref="#group.ZZS" role="MP" to="2016-01-21"/>
+               </person>
+               <person xml:id="JakimovsAleksandrs">
+                  <persName>
+                     <surname>Jakimovs</surname>
+                     <forename>Aleksandrs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2016-06-16" ref="#group.SASKAŅA" role="member" to="2018-10-25"/>
+                  <affiliation from="2016-06-16" ref="#group.SASKAŅA" role="MP" to="2018-10-25"/>
+               </person>
+               <person xml:id="BērziņšAndris">
+                  <persName>
+                     <surname>Bērziņš</surname>
+                     <forename>Andris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="RinkēvičsEdgars">
+                  <persName>
+                     <surname>Rinkēvičs</surname>
+                     <forename>Edgars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="UpenieksJānis">
+                  <persName>
+                     <surname>Upenieks</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-27" ref="#group.VIENOTĪBA" role="member" to="2018-10-11"/>
+                  <affiliation from="2014-11-27" ref="#group.VIENOTĪBA" role="MP" to="2018-10-11"/>
+               </person>
+               <person xml:id="DombrovskisVjačeslavs">
+                  <persName>
+                     <surname>Dombrovskis</surname>
+                     <forename>Vjačeslavs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-13" ref="#group.VIENOTĪBA" role="member" to="2015-03-26"/>
+                  <affiliation from="2014-11-13" ref="#group.VIENOTĪBA" role="MP" to="2015-03-26"/>
+                  <affiliation from="2018-11-29" ref="#group.SASKAŅA" role="member" to="2020-09-17"/>
+                  <affiliation from="2018-11-29" ref="#group.SASKAŅA" role="MP" to="2020-09-17"/>
+               </person>
+               <person xml:id="NestorsEiki">
+                  <persName>
+                     <surname>Nestors</surname>
+                     <forename>Eiki</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="SiliņaEvika">
+                  <persName>
+                     <surname>Siliņa</surname>
+                     <forename>Evika</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+               </person>
+               <person xml:id="BerkovsDžons">
+                  <persName>
+                     <surname>Berkovs</surname>
+                     <forename>Džons</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="VilksAndris">
+                  <persName>
+                     <surname>Vilks</surname>
+                     <forename>Andris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-12-11" ref="#group.NA" role="member" to="2014-12-11"/>
+                  <affiliation from="2014-12-11" ref="#group.NA" role="MP" to="2014-12-11"/>
+               </person>
+               <person xml:id="MiloslavskisRomans">
+                  <persName>
+                     <surname>Miloslavskis</surname>
+                     <forename>Romans</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="KrapāneIeva">
+                  <persName>
+                     <surname>Krapāne</surname>
+                     <forename>Ieva</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2019-05-02" ref="#group.KPV-LV" role="member" to="2021-02-04"/>
+                  <affiliation from="2019-05-02" ref="#group.KPV-LV" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="SkrideAndris">
+                  <persName>
+                     <surname>Skride</surname>
+                     <forename>Andris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-11-22" ref="#group.AP" role="member" to="2020-12-21"/>
+                  <affiliation from="2018-11-22" ref="#group.AP" role="MP" to="2020-12-21"/>
+               </person>
+               <person xml:id="RibakovsIvans">
+                  <persName>
+                     <surname>Ribakovs</surname>
+                     <forename>Ivans</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-02-19" ref="#group.SASKAŅA" role="member" to="2020-10-28"/>
+                  <affiliation from="2015-02-19" ref="#group.SASKAŅA" role="MP" to="2020-10-28"/>
+               </person>
+               <person xml:id="Benhena-BēkenaIveta">
+                  <persName>
+                     <surname>Benhena-Bēkena</surname>
+                     <forename>Iveta</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-12-06" ref="#group.KPV-LV" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-12-06" ref="#group.KPV-LV" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="TutinsJānis">
+                  <persName>
+                     <surname>Tutins</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-27" ref="#group.SASKAŅA" role="member" to="2020-10-28"/>
+                  <affiliation from="2014-11-27" ref="#group.SASKAŅA" role="MP" to="2020-10-28"/>
+               </person>
+               <person xml:id="PutraEdgars">
+                  <persName>
+                     <surname>Putra</surname>
+                     <forename>Edgars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-27" ref="#group.ZZS" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-11-27" ref="#group.ZZS" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="AdamovičsAldis">
+                  <persName>
+                     <surname>Adamovičs</surname>
+                     <forename>Aldis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.VIENOTĪBA" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-11-05" ref="#group.VIENOTĪBA" role="MP" to="2018-11-01"/>
+                  <affiliation from="2018-12-06" ref="#group.JV" role="member" to="2020-12-17"/>
+                  <affiliation from="2018-12-06" ref="#group.JV" role="MP" to="2020-12-17"/>
+               </person>
+               <person xml:id="MirskisSergejs">
+                  <persName>
+                     <surname>Mirskis</surname>
+                     <forename>Sergejs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-11-03" ref="#group.SASKAŅA" role="member" to="2018-09-06"/>
+                  <affiliation from="2015-11-03" ref="#group.SASKAŅA" role="MP" to="2018-09-06"/>
+               </person>
+               <person xml:id="EglītisGatis">
+                  <persName>
+                     <surname>Eglītis</surname>
+                     <forename>Gatis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-11-29" ref="#group.JK" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-11-29" ref="#group.JK" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="SudrabaInguna">
+                  <persName>
+                     <surname>Sudraba</surname>
+                     <forename>Inguna</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+               </person>
+               <person xml:id="ZnotiņšReinis">
+                  <persName>
+                     <surname>Znotiņš</surname>
+                     <forename>Reinis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-11-29" ref="#group.JK" role="member" to="2021-01-28"/>
+                  <affiliation from="2018-11-29" ref="#group.JK" role="MP" to="2021-01-28"/>
+               </person>
+               <person xml:id="PlešsArtūrsToms">
+                  <persName>
+                     <surname>Plešs</surname>
+                     <forename>Artūrs Toms</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-12-20" ref="#group.AP" role="member" to="2020-12-17"/>
+                  <affiliation from="2018-12-20" ref="#group.AP" role="MP" to="2020-12-17"/>
+               </person>
+               <person xml:id="PlatpersArvīds">
+                  <persName>
+                     <surname>Platpers</surname>
+                     <forename>Arvīds</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="ĢirģensKaspars">
+                  <persName>
+                     <surname>Ģirģens</surname>
+                     <forename>Kaspars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2019-01-31" ref="#group.KPV-LV" role="member" to="2021-01-28"/>
+                  <affiliation from="2019-01-31" ref="#group.KPV-LV" role="MP" to="2021-01-28"/>
+               </person>
+               <person xml:id="KļaviņšAskolds">
+                  <persName>
+                     <surname>Kļaviņš</surname>
+                     <forename>Askolds</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2016-09-08" ref="#group.ZZS" role="member" to="2018-06-21"/>
+                  <affiliation from="2016-09-08" ref="#group.ZZS" role="MP" to="2018-06-21"/>
+               </person>
+               <person xml:id="PugaIvars">
+                  <persName>
+                     <surname>Puga</surname>
+                     <forename>Ivars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2019-01-31" ref="#group.KPV-LV" role="member" to="2021-02-04"/>
+                  <affiliation from="2019-01-31" ref="#group.KPV-LV" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="JurašsJuris">
+                  <persName>
+                     <surname>Jurašs</surname>
+                     <forename>Juris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-12-06" ref="#group.JK" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-12-06" ref="#group.JK" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="VitenbergsJānis">
+                  <persName>
+                     <surname>Vitenbergs</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-12-13" ref="#group.KPV-LV" role="member" to="2020-03-20"/>
+                  <affiliation from="2018-12-13" ref="#group.KPV-LV" role="MP" to="2020-03-20"/>
+               </person>
+               <person xml:id="KūtrisGunārs">
+                  <persName>
+                     <surname>Kūtris</surname>
+                     <forename>Gunārs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="MārtužaEva">
+                  <persName>
+                     <surname>Mārtuža</surname>
+                     <forename>Eva</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2020-07-09" ref="#group.JK" role="member" to="2020-12-17"/>
+                  <affiliation from="2020-07-09" ref="#group.JK" role="MP" to="2020-12-17"/>
+               </person>
+               <person xml:id="SprūdeKarina">
+                  <persName>
+                     <surname>Sprūde</surname>
+                     <forename>Karina</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-12-06" ref="#group.KPV-LV" role="member" to="2019-06-06"/>
+                  <affiliation from="2018-12-06" ref="#group.KPV-LV" role="MP" to="2019-06-06"/>
+               </person>
+               <person xml:id="VītolsAndris">
+                  <persName>
+                     <surname>Vītols</surname>
+                     <forename>Andris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="NorlēnsAndreass">
+                  <persName>
+                     <surname>Norlēns</surname>
+                     <forename>Andreass</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="KlaužsJānis">
+                  <persName>
+                     <surname>Klaužs</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-12-17" ref="#group.ZZS" role="member" to="2018-10-11"/>
+                  <affiliation from="2014-12-17" ref="#group.ZZS" role="MP" to="2018-10-11"/>
+               </person>
+               <person xml:id="ŠteinsMārtiņš">
+                  <persName>
+                     <surname>Šteins</surname>
+                     <forename>Mārtiņš</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2019-03-07" ref="#group.AP" role="member" to="2021-02-04"/>
+                  <affiliation from="2019-03-07" ref="#group.AP" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="PavļutsDaniels">
+                  <persName>
+                     <surname>Pavļuts</surname>
+                     <forename>Daniels</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-11-29" ref="#group.AP" role="member" to="2021-01-07"/>
+                  <affiliation from="2018-11-29" ref="#group.AP" role="MP" to="2021-01-07"/>
+               </person>
+               <person xml:id="KariņšArtursKrišjānis">
+                  <persName>
+                     <surname>Kariņš</surname>
+                     <forename>Arturs Krišjānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="JansonsJuris">
+                  <persName>
+                     <surname>Jansons</surname>
+                     <forename>Juris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="ValainisViktors">
+                  <persName>
+                     <surname>Valainis</surname>
+                     <forename>Viktors</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-11-30" ref="#group.VIENOTĪBA" role="member" to="2018-01-11"/>
+                  <affiliation from="2015-11-30" ref="#group.VIENOTĪBA" role="MP" to="2018-01-11"/>
+                  <affiliation from="2018-11-29" ref="#group.ZZS" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-11-29" ref="#group.ZZS" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="ŠimfaSilvija">
+                  <persName>
+                     <surname>Šimfa</surname>
+                     <forename>Silvija</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+               </person>
+               <person xml:id="DūrītisIlmārs">
+                  <persName>
+                     <surname>Dūrītis</surname>
+                     <forename>Ilmārs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-12-13" ref="#group.AP" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-12-13" ref="#group.AP" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="LiepiņšDainis">
+                  <persName>
+                     <surname>Liepiņš</surname>
+                     <forename>Dainis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="RažuksRomualds">
+                  <persName>
+                     <surname>Ražuks</surname>
+                     <forename>Romualds</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-13" ref="#group.VIENOTĪBA" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-11-13" ref="#group.VIENOTĪBA" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="NemiroRalfs">
+                  <persName>
+                     <surname>Nemiro</surname>
+                     <forename>Ralfs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-12-20" ref="#group.KPV-LV" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-12-20" ref="#group.KPV-LV" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="ĀdamsonsJānis">
+                  <persName>
+                     <surname>Ādamsons</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="member" to="2019-12-18"/>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="MP" to="2019-12-18"/>
+               </person>
+               <person xml:id="KlementjevsIvans">
+                  <persName>
+                     <surname>Klementjevs</surname>
+                     <forename>Ivans</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="member" to="2021-01-28"/>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="MP" to="2021-01-28"/>
+               </person>
+               <person xml:id="LaizāneInese">
+                  <persName>
+                     <surname>Laizāne</surname>
+                     <forename>Inese</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2014-11-27" ref="#group.NA" role="member" to="2018-06-20"/>
+                  <affiliation from="2014-11-27" ref="#group.NA" role="MP" to="2018-06-20"/>
+               </person>
+               <person xml:id="StepaņenkoJūlija">
+                  <persName>
+                     <surname>Stepaņenko</surname>
+                     <forename>Jūlija</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2014-12-17" ref="#group.SASKAŅA" role="member" to="2018-10-04"/>
+                  <affiliation from="2014-12-17" ref="#group.SASKAŅA" role="MP" to="2018-10-04"/>
+               </person>
+               <person xml:id="FērijsDžordžs">
+                  <persName>
+                     <surname>Fērijs</surname>
+                     <forename>Džordžs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="GobzemsAldis">
+                  <persName>
+                     <surname>Gobzems</surname>
+                     <forename>Aldis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-12-06" ref="#group.KPV-LV" role="member" to="2019-01-31"/>
+                  <affiliation from="2018-12-06" ref="#group.KPV-LV" role="MP" to="2019-01-31"/>
+               </person>
+               <person xml:id="RusiņšGunārs">
+                  <persName>
+                     <surname>Rusiņš</surname>
+                     <forename>Gunārs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-12-11" ref="#group.NA" role="member" to="2015-02-19"/>
+                  <affiliation from="2014-12-11" ref="#group.NA" role="MP" to="2015-02-19"/>
+               </person>
+               <person xml:id="LevitsEgils">
+                  <persName>
+                     <surname>Levits</surname>
+                     <forename>Egils</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="MežeckisRomāns">
+                  <persName>
+                     <surname>Mežeckis</surname>
+                     <forename>Romāns</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="KaimiņšArtuss">
+                  <persName>
+                     <surname>Kaimiņš</surname>
+                     <forename>Artuss</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-11-13" ref="#group.KPV-LV" role="member" to="2019-12-19"/>
+                  <affiliation from="2018-11-13" ref="#group.KPV-LV" role="MP" to="2019-12-19"/>
+               </person>
+               <person xml:id="Kursīte-PakuleJanīna">
+                  <persName>
+                     <surname>Kursīte-Pakule</surname>
+                     <forename>Janīna</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2014-12-11" ref="#group.NA" role="member" to="2021-01-21"/>
+                  <affiliation from="2014-12-11" ref="#group.NA" role="MP" to="2021-01-21"/>
+               </person>
+               <person xml:id="UrbanovičsJānis">
+                  <persName>
+                     <surname>Urbanovičs</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="member" to="2019-12-18"/>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="MP" to="2019-12-18"/>
+               </person>
+               <person xml:id="ŠulcsJuris">
+                  <persName>
+                     <surname>Šulcs</surname>
+                     <forename>Juris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-12-11" ref="#group.VIENOTĪBA" role="member" to="2018-10-25"/>
+                  <affiliation from="2014-12-11" ref="#group.VIENOTĪBA" role="MP" to="2018-10-25"/>
+               </person>
+               <person xml:id="MelgailisRihards">
+                  <persName>
+                     <surname>Melgailis</surname>
+                     <forename>Rihards</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="PotapkinsSergejs">
+                  <persName>
+                     <surname>Potapkins</surname>
+                     <forename>Sergejs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-12-10" ref="#group.SASKAŅA" role="member" to="2018-09-27"/>
+                  <affiliation from="2015-12-10" ref="#group.SASKAŅA" role="MP" to="2018-09-27"/>
+               </person>
+               <person xml:id="CilinskisEinārs">
+                  <persName>
+                     <surname>Cilinskis</surname>
+                     <forename>Einārs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-12-04" ref="#group.NA" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-12-04" ref="#group.NA" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="BērziņšAndris1955">
+                  <persName>
+                     <surname>Bērziņš</surname>
+                     <forename>Andris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-01-22" ref="#group.ZZS" role="member" to="2018-10-25"/>
+                  <affiliation from="2015-01-22" ref="#group.ZZS" role="MP" to="2018-10-25"/>
+               </person>
+               <person xml:id="BarčaAija">
+                  <persName>
+                     <surname>Barča</surname>
+                     <forename>Aija</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2014-12-04" ref="#group.ZZS" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-12-04" ref="#group.ZZS" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="ButānsJānis">
+                  <persName>
+                     <surname>Butāns</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2019-03-07" ref="#group.JK" role="member" to="2021-01-21"/>
+                  <affiliation from="2019-03-07" ref="#group.JK" role="MP" to="2021-01-21"/>
+               </person>
+               <person xml:id="ParādnieksImants">
+                  <persName>
+                     <surname>Parādnieks</surname>
+                     <forename>Imants</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.NA" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-11-05" ref="#group.NA" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="ŅikiforovsŅikita">
+                  <persName>
+                     <surname>Ņikiforovs</surname>
+                     <forename>Ņikita</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="member" to="2017-04-20"/>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="MP" to="2017-04-20"/>
+               </person>
+               <person xml:id="ČigāneLolita">
+                  <persName>
+                     <surname>Čigāne</surname>
+                     <forename>Lolita</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2014-11-05" ref="#group.VIENOTĪBA" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-11-05" ref="#group.VIENOTĪBA" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="SmiltēnsEdvards">
+                  <persName>
+                     <surname>Smiltēns</surname>
+                     <forename>Edvards</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-13" ref="#group.VIENOTĪBA" role="member" to="2017-07-28"/>
+                  <affiliation from="2014-11-13" ref="#group.VIENOTĪBA" role="MP" to="2017-07-28"/>
+               </person>
+               <person xml:id="LinkaitsTālis">
+                  <persName>
+                     <surname>Linkaits</surname>
+                     <forename>Tālis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-12-13" ref="#group.JK" role="member" to="2018-12-20"/>
+                  <affiliation from="2018-12-13" ref="#group.JK" role="MP" to="2018-12-20"/>
+               </person>
+               <person xml:id="KalniņšOjārsĒriks">
+                  <persName>
+                     <surname>Kalniņš</surname>
+                     <forename>Ojārs Ēriks</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-20" ref="#group.VIENOTĪBA" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-11-20" ref="#group.VIENOTĪBA" role="MP" to="2018-11-01"/>
+                  <affiliation from="2018-12-06" ref="#group.JV" role="member" to="2021-01-28"/>
+                  <affiliation from="2018-12-06" ref="#group.JV" role="MP" to="2021-01-28"/>
+               </person>
+               <person xml:id="NikonovsVladimirs">
+                  <persName>
+                     <surname>Nikonovs</surname>
+                     <forename>Vladimirs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-11-19" ref="#group.SASKAŅA" role="member" to="2019-04-03"/>
+                  <affiliation from="2015-11-19" ref="#group.SASKAŅA" role="MP" to="2019-04-03"/>
+               </person>
+               <person xml:id="GudfinsonsEinars">
+                  <persName>
+                     <surname>Gudfinsons</surname>
+                     <forename>Einars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="LazarevaJeļena">
+                  <persName>
+                     <surname>Lazareva</surname>
+                     <forename>Jeļena</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2017-07-28" ref="#group.SASKAŅA" role="member" to="2018-06-21"/>
+                  <affiliation from="2017-07-28" ref="#group.SASKAŅA" role="MP" to="2018-06-21"/>
+               </person>
+               <person xml:id="LatkovskisIlmārs">
+                  <persName>
+                     <surname>Latkovskis</surname>
+                     <forename>Ilmārs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-13" ref="#group.NA" role="member" to="2017-06-08"/>
+                  <affiliation from="2014-11-13" ref="#group.NA" role="MP" to="2017-06-08"/>
+               </person>
+               <person xml:id="TavarsEdgars">
+                  <persName>
+                     <surname>Tavars</surname>
+                     <forename>Edgars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2021-01-07" ref="#group.ZZS" role="member" to="2021-02-04"/>
+                  <affiliation from="2021-01-07" ref="#group.ZZS" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="BlumbergsAldis">
+                  <persName>
+                     <surname>Blumbergs</surname>
+                     <forename>Aldis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2019-02-07" ref="#group.KPV-LV" role="member" to="2019-12-19"/>
+                  <affiliation from="2019-02-07" ref="#group.KPV-LV" role="MP" to="2019-12-19"/>
+               </person>
+               <person xml:id="ĶirsisVilnis">
+                  <persName>
+                     <surname>Ķirsis</surname>
+                     <forename>Vilnis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.VIENOTĪBA" role="member" to="2017-05-18"/>
+                  <affiliation from="2014-11-05" ref="#group.VIENOTĪBA" role="MP" to="2017-05-18"/>
+               </person>
+               <person xml:id="RasnačsDzintars">
+                  <persName>
+                     <surname>Rasnačs</surname>
+                     <forename>Dzintars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="BudriķisUldis">
+                  <persName>
+                     <surname>Budriķis</surname>
+                     <forename>Uldis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-11-20" ref="#group.JK" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-11-20" ref="#group.JK" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="PutniņšRenārs">
+                  <persName>
+                     <surname>Putniņš</surname>
+                     <forename>Renārs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2017-11-22" ref="#group.VIENOTĪBA" role="member" to="2018-06-21"/>
+                  <affiliation from="2017-11-22" ref="#group.VIENOTĪBA" role="MP" to="2018-06-21"/>
+               </person>
+               <person xml:id="MeijaAivars">
+                  <persName>
+                     <surname>Meija</surname>
+                     <forename>Aivars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="KrēsliņšKārlis">
+                  <persName>
+                     <surname>Krēsliņš</surname>
+                     <forename>Kārlis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.NA" role="member" to="2018-10-18"/>
+                  <affiliation from="2014-11-05" ref="#group.NA" role="MP" to="2018-10-18"/>
+               </person>
+               <person xml:id="DūklavsJānis">
+                  <persName>
+                     <surname>Dūklavs</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-11-29" ref="#group.ZZS" role="member" to="2020-12-10"/>
+                  <affiliation from="2018-11-29" ref="#group.ZZS" role="MP" to="2020-12-10"/>
+               </person>
+               <person xml:id="DombravaJānis">
+                  <persName>
+                     <surname>Dombrava</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.NA" role="member" to="2021-01-28"/>
+                  <affiliation from="2014-11-05" ref="#group.NA" role="MP" to="2021-01-28"/>
+               </person>
+               <person xml:id="IndriksoneIlze">
+                  <persName>
+                     <surname>Indriksone</surname>
+                     <forename>Ilze</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2019-01-10" ref="#group.NA" role="member" to="2021-02-04"/>
+                  <affiliation from="2019-01-10" ref="#group.NA" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="CielēnsJānis">
+                  <persName>
+                     <surname>Cielēns</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2019-05-23" ref="#group.JK" role="member" to="2020-11-30"/>
+                  <affiliation from="2019-05-23" ref="#group.JK" role="MP" to="2020-11-30"/>
+               </person>
+               <person xml:id="ZujevsIgors">
+                  <persName>
+                     <surname>Zujevs</surname>
+                     <forename>Igors</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-03-08" ref="#group.SASKAŅA" role="member" to="2018-03-08"/>
+                  <affiliation from="2018-03-08" ref="#group.SASKAŅA" role="MP" to="2018-03-08"/>
+               </person>
+               <person xml:id="KazinovskisAndris">
+                  <persName>
+                     <surname>Kazinovskis</surname>
+                     <forename>Andris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2019-01-31" ref="#group.JK" role="member" to="2020-05-26"/>
+                  <affiliation from="2019-01-31" ref="#group.JK" role="MP" to="2020-05-26"/>
+               </person>
+               <person xml:id="ŽunnaNormunds">
+                  <persName>
+                     <surname>Žunna</surname>
+                     <forename>Normunds</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-12-20" ref="#group.JK" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-12-20" ref="#group.JK" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="Reizniece-OzolaDana">
+                  <persName>
+                     <surname>Reizniece-Ozola</surname>
+                     <forename>Dana</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-11-29" ref="#group.ZZS" role="member" to="2020-12-21"/>
+                  <affiliation from="2018-11-29" ref="#group.ZZS" role="MP" to="2020-12-21"/>
+               </person>
+               <person xml:id="GolubevaMarija">
+                  <persName>
+                     <surname>Golubeva</surname>
+                     <forename>Marija</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-11-22" ref="#group.AP" role="member" to="2021-01-28"/>
+                  <affiliation from="2018-11-22" ref="#group.AP" role="MP" to="2021-01-28"/>
+               </person>
+               <person xml:id="VējonisRaimonds">
+                  <persName>
+                     <surname>Vējonis</surname>
+                     <forename>Raimonds</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="VucānsJānis">
+                  <persName>
+                     <surname>Vucāns</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-27" ref="#group.ZZS" role="member" to="2021-01-28"/>
+                  <affiliation from="2014-11-27" ref="#group.ZZS" role="MP" to="2021-01-28"/>
+               </person>
+               <person xml:id="AizstrautaInese">
+                  <persName>
+                     <surname>Aizstrauta</surname>
+                     <forename>Inese</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-03-22" ref="#group.ZZS" role="member" to="2018-10-11"/>
+                  <affiliation from="2018-03-22" ref="#group.ZZS" role="MP" to="2018-10-11"/>
+               </person>
+               <person xml:id="LiepiņaLiene">
+                  <persName>
+                     <surname>Liepiņa</surname>
+                     <forename>Liene</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-12-20" ref="#group.KPV-LV" role="member" to="2019-05-30"/>
+                  <affiliation from="2018-12-20" ref="#group.KPV-LV" role="MP" to="2019-05-30"/>
+               </person>
+               <person xml:id="KrūmiņaElita">
+                  <persName>
+                     <surname>Krūmiņa</surname>
+                     <forename>Elita</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+               </person>
+               <person xml:id="Rukšāne-ŠčipčinskaDace">
+                  <persName>
+                     <surname>Rukšāne-Ščipčinska</surname>
+                     <forename>Dace</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-12-13" ref="#group.AP" role="member" to="2021-01-14"/>
+                  <affiliation from="2018-12-13" ref="#group.AP" role="MP" to="2021-01-14"/>
+               </person>
+               <person xml:id="BikšeAigars">
+                  <persName>
+                     <surname>Bikše</surname>
+                     <forename>Aigars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2020-12-21" ref="#group.AP" role="member" to="2020-12-21"/>
+                  <affiliation from="2020-12-21" ref="#group.AP" role="MP" to="2020-12-21"/>
+               </person>
+               <person xml:id="KucinsEdgars">
+                  <persName>
+                     <surname>Kucins</surname>
+                     <forename>Edgars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2019-02-21" ref="#group.SASKAŅA" role="member" to="2021-02-04"/>
+                  <affiliation from="2019-02-21" ref="#group.SASKAŅA" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="GerhardsKaspars">
+                  <persName>
+                     <surname>Gerhards</surname>
+                     <forename>Kaspars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="KursīteJanīna">
+                  <persName>
+                     <surname>Kursīte</surname>
+                     <forename>Janīna</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2015-05-14" ref="#group.VIENOTĪBA" role="member" to="2015-09-17"/>
+                  <affiliation from="2015-05-14" ref="#group.VIENOTĪBA" role="MP" to="2015-09-17"/>
+                  <affiliation from="2019-04-11" ref="#group.KPV-LV" role="member" to="2020-12-03"/>
+                  <affiliation from="2019-04-11" ref="#group.KPV-LV" role="MP" to="2020-12-03"/>
+               </person>
+               <person xml:id="IkstenaInese">
+                  <persName>
+                     <surname>Ikstena</surname>
+                     <forename>Inese</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-12-06" ref="#group.AP" role="member" to="2021-01-28"/>
+                  <affiliation from="2018-12-06" ref="#group.AP" role="MP" to="2021-01-28"/>
+               </person>
+               <person xml:id="ŠmitsDidzis">
+                  <persName>
+                     <surname>Šmits</surname>
+                     <forename>Didzis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-12-06" ref="#group.KPV-LV" role="member" to="2019-06-13"/>
+                  <affiliation from="2018-12-06" ref="#group.KPV-LV" role="MP" to="2019-06-13"/>
+               </person>
+               <person xml:id="MuižnieceAnita">
+                  <persName>
+                     <surname>Muižniece</surname>
+                     <forename>Anita</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-11-20" ref="#group.JK" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-11-20" ref="#group.JK" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="MatīssAnrijs">
+                  <persName>
+                     <surname>Matīss</surname>
+                     <forename>Anrijs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2016-01-21" ref="#group.VIENOTĪBA" role="member" to="2018-06-07"/>
+                  <affiliation from="2016-01-21" ref="#group.VIENOTĪBA" role="MP" to="2018-06-07"/>
+               </person>
+               <person xml:id="KabanovsNikolajs">
+                  <persName>
+                     <surname>Kabanovs</surname>
+                     <forename>Nikolajs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-12-06" ref="#group.SASKAŅA" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-12-06" ref="#group.SASKAŅA" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="BērziņšGaidis">
+                  <persName>
+                     <surname>Bērziņš</surname>
+                     <forename>Gaidis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-13" ref="#group.NA" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-11-13" ref="#group.NA" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="OzolaLinda">
+                  <persName>
+                     <surname>Ozola</surname>
+                     <forename>Linda</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-11-13" ref="#group.JK" role="member" to="2020-09-17"/>
+                  <affiliation from="2018-11-13" ref="#group.JK" role="MP" to="2020-09-17"/>
+               </person>
+               <person xml:id="MorozovsAndris">
+                  <persName>
+                     <surname>Morozovs</surname>
+                     <forename>Andris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2017-10-19" ref="#group.SASKAŅA" role="member" to="2018-09-20"/>
+                  <affiliation from="2017-10-19" ref="#group.SASKAŅA" role="MP" to="2018-09-20"/>
+               </person>
+               <person xml:id="ViņķeleIlze">
+                  <persName>
+                     <surname>Viņķele</surname>
+                     <forename>Ilze</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2014-11-05" ref="#group.VIENOTĪBA" role="member" to="2017-07-28"/>
+                  <affiliation from="2014-11-05" ref="#group.VIENOTĪBA" role="MP" to="2017-07-28"/>
+               </person>
+               <person xml:id="DaudzeGundars">
+                  <persName>
+                     <surname>Daudze</surname>
+                     <forename>Gundars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-01-22" ref="#group.ZZS" role="member" to="2020-12-10"/>
+                  <affiliation from="2015-01-22" ref="#group.ZZS" role="MP" to="2020-12-10"/>
+               </person>
+               <person xml:id="GeidānsAivars">
+                  <persName>
+                     <surname>Geidāns</surname>
+                     <forename>Aivars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2019-04-25" ref="#group.KPV-LV" role="member" to="2021-02-04"/>
+                  <affiliation from="2019-04-25" ref="#group.KPV-LV" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="MiezainisJurģis">
+                  <persName>
+                     <surname>Miezainis</surname>
+                     <forename>Jurģis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="KrišānsJānis">
+                  <persName>
+                     <surname>Krišāns</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2019-01-17" ref="#group.SASKAŅA" role="member" to="2020-12-17"/>
+                  <affiliation from="2019-01-17" ref="#group.SASKAŅA" role="MP" to="2020-12-17"/>
+               </person>
+               <person xml:id="Lībiņa-EgnereInese">
+                  <persName>
+                     <surname>Lībiņa-Egnere</surname>
+                     <forename>Inese</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2014-11-27" ref="#group.VIENOTĪBA" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-11-27" ref="#group.VIENOTĪBA" role="MP" to="2018-11-01"/>
+                  <affiliation from="2018-11-22" ref="#group.JV" role="member" to="2021-01-28"/>
+                  <affiliation from="2018-11-22" ref="#group.JV" role="MP" to="2021-01-28"/>
+               </person>
+               <person xml:id="ĢirģensSandis">
+                  <persName>
+                     <surname>Ģirģens</surname>
+                     <forename>Sandis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="SeržantsKārlis">
+                  <persName>
+                     <surname>Seržants</surname>
+                     <forename>Kārlis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.ZZS" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-11-05" ref="#group.ZZS" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="KlementjevsAndrejs">
+                  <persName>
+                     <surname>Klementjevs</surname>
+                     <forename>Andrejs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="member" to="2021-02-04"/>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="BergmanisRaimonds">
+                  <persName>
+                     <surname>Bergmanis</surname>
+                     <forename>Raimonds</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-05-07" ref="#group.ZZS" role="member" to="2021-01-14"/>
+                  <affiliation from="2015-05-07" ref="#group.ZZS" role="MP" to="2021-01-14"/>
+               </person>
+               <person xml:id="NaudiņšRomāns">
+                  <persName>
+                     <surname>Naudiņš</surname>
+                     <forename>Romāns</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-12-18" ref="#group.NA" role="member" to="2020-10-22"/>
+                  <affiliation from="2014-12-18" ref="#group.NA" role="MP" to="2020-10-22"/>
+               </person>
+               <person xml:id="ReirsJānis">
+                  <persName>
+                     <surname>Reirs</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="DzintarsRaivis">
+                  <persName>
+                     <surname>Dzintars</surname>
+                     <forename>Raivis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-06-03" ref="#group.NA" role="member" to="2021-02-04"/>
+                  <affiliation from="2015-06-03" ref="#group.NA" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="BordānsJānis">
+                  <persName>
+                     <surname>Bordāns</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-11-22" ref="#group.JK" role="member" to="2019-01-23"/>
+                  <affiliation from="2018-11-22" ref="#group.JK" role="MP" to="2019-01-23"/>
+               </person>
+               <person xml:id="KleinbergaNellija">
+                  <persName>
+                     <surname>Kleinberga</surname>
+                     <forename>Nellija</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+               </person>
+               <person xml:id="AgešinsValērijs">
+                  <persName>
+                     <surname>Agešins</surname>
+                     <forename>Valērijs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-27" ref="#group.SASKAŅA" role="member" to="2021-01-14"/>
+                  <affiliation from="2014-11-27" ref="#group.SASKAŅA" role="MP" to="2021-01-14"/>
+               </person>
+               <person xml:id="LejiņšAtis">
+                  <persName>
+                     <surname>Lejiņš</surname>
+                     <forename>Atis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-01-22" ref="#group.VIENOTĪBA" role="member" to="2018-11-01"/>
+                  <affiliation from="2015-01-22" ref="#group.VIENOTĪBA" role="MP" to="2018-11-01"/>
+                  <affiliation from="2019-01-31" ref="#group.JV" role="member" to="2021-01-28"/>
+                  <affiliation from="2019-01-31" ref="#group.JV" role="MP" to="2021-01-28"/>
+               </person>
+               <person xml:id="ElksniņšAndrejs">
+                  <persName>
+                     <surname>Elksniņš</surname>
+                     <forename>Andrejs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="member" to="2017-06-01"/>
+                  <affiliation from="2014-11-05" ref="#group.SASKAŅA" role="MP" to="2017-06-01"/>
+               </person>
+               <person xml:id="KozlovskaLīga">
+                  <persName>
+                     <surname>Kozlovska</surname>
+                     <forename>Līga</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2017-10-05" ref="#group.ZZS" role="member" to="2018-09-27"/>
+                  <affiliation from="2017-10-05" ref="#group.ZZS" role="MP" to="2018-09-27"/>
+               </person>
+               <person xml:id="Zālīte-GrosaEvita">
+                  <persName>
+                     <surname>Zālīte-Grosa</surname>
+                     <forename>Evita</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-12-20" ref="#group.JK" role="member" to="2021-01-21"/>
+                  <affiliation from="2018-12-20" ref="#group.JK" role="MP" to="2021-01-21"/>
+               </person>
+               <person xml:id="ViļumsJuris">
+                  <persName>
+                     <surname>Viļums</surname>
+                     <forename>Juris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="BuiķisAndris">
+                  <persName>
+                     <surname>Buiķis</surname>
+                     <forename>Andris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-27" ref="#group.NA" role="member" to="2015-07-08"/>
+                  <affiliation from="2014-11-27" ref="#group.NA" role="MP" to="2015-07-08"/>
+               </person>
+               <person xml:id="VoikaInese">
+                  <persName>
+                     <surname>Voika</surname>
+                     <forename>Inese</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-12-06" ref="#group.AP" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-12-06" ref="#group.AP" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="TēraudaVitaAnda">
+                  <persName>
+                     <surname>Tērauda</surname>
+                     <forename>Vita Anda</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-11-22" ref="#group.AP" role="member" to="2021-01-28"/>
+                  <affiliation from="2018-11-22" ref="#group.AP" role="MP" to="2021-01-28"/>
+               </person>
+               <person xml:id="FeldmansKrišjānis">
+                  <persName>
+                     <surname>Feldmans</surname>
+                     <forename>Krišjānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-11-22" ref="#group.JK" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-11-22" ref="#group.JK" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="TrupovnieksJānis">
+                  <persName>
+                     <surname>Trupovnieks</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-27" ref="#group.ZZS" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-11-27" ref="#group.ZZS" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="PetravičaRamona">
+                  <persName>
+                     <surname>Petraviča</surname>
+                     <forename>Ramona</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-11-29" ref="#group.KPV-LV" role="member" to="2020-12-21"/>
+                  <affiliation from="2018-11-29" ref="#group.KPV-LV" role="MP" to="2020-12-21"/>
+               </person>
+               <person xml:id="PūceJuris">
+                  <persName>
+                     <surname>Pūce</surname>
+                     <forename>Juris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-12-06" ref="#group.AP" role="member" to="2019-01-10"/>
+                  <affiliation from="2018-12-06" ref="#group.AP" role="MP" to="2019-01-10"/>
+               </person>
+               <person xml:id="AšeradensArvils">
+                  <persName>
+                     <surname>Ašeradens</surname>
+                     <forename>Arvils</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-12-06" ref="#group.JV" role="member" to="2020-10-29"/>
+                  <affiliation from="2018-12-06" ref="#group.JV" role="MP" to="2020-10-29"/>
+               </person>
+               <person xml:id="MūrnieceInāra">
+                  <persName>
+                     <surname>Mūrniece</surname>
+                     <forename>Ināra</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2015-01-22" ref="#group.NA" role="member" to="2021-01-28"/>
+                  <affiliation from="2015-01-22" ref="#group.NA" role="MP" to="2021-01-28"/>
+               </person>
+               <person xml:id="ZaķisDzintars">
+                  <persName>
+                     <surname>Zaķis</surname>
+                     <forename>Dzintars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-13" ref="#group.VIENOTĪBA" role="member" to="2018-05-24"/>
+                  <affiliation from="2014-11-13" ref="#group.VIENOTĪBA" role="MP" to="2018-05-24"/>
+               </person>
+               <person xml:id="TeirumnieksEdmunds">
+                  <persName>
+                     <surname>Teirumnieks</surname>
+                     <forename>Edmunds</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2019-02-14" ref="#group.NA" role="member" to="2020-06-10"/>
+                  <affiliation from="2019-02-14" ref="#group.NA" role="MP" to="2020-06-10"/>
+               </person>
+               <person xml:id="BaumaneKrista">
+                  <persName>
+                     <surname>Baumane</surname>
+                     <forename>Krista</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2020-08-18" ref="#group.AP" role="member" to="2021-02-04"/>
+                  <affiliation from="2020-08-18" ref="#group.AP" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="PuntulisNauris">
+                  <persName>
+                     <surname>Puntulis</surname>
+                     <forename>Nauris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="JalinskaJanīna">
+                  <persName>
+                     <surname>Jalinska</surname>
+                     <forename>Janīna</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-12-06" ref="#group.ZZS" role="member" to="2021-01-07"/>
+                  <affiliation from="2018-12-06" ref="#group.ZZS" role="MP" to="2021-01-07"/>
+               </person>
+               <person xml:id="LočmeleRegīna">
+                  <persName>
+                     <surname>Ločmele</surname>
+                     <forename>Regīna</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2020-10-01" ref="#group.SASKAŅA" role="member" to="2021-02-04"/>
+                  <affiliation from="2020-10-01" ref="#group.SASKAŅA" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="MožvilloMāris">
+                  <persName>
+                     <surname>Možvillo</surname>
+                     <forename>Māris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2020-12-02" ref="#group.KPV-LV" role="member" to="2020-12-21"/>
+                  <affiliation from="2020-12-02" ref="#group.KPV-LV" role="MP" to="2020-12-21"/>
+               </person>
+               <person xml:id="LīdakaIngmārs">
+                  <persName>
+                     <surname>Līdaka</surname>
+                     <forename>Ingmārs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-04" ref="#group.ZZS" role="member" to="2018-03-01"/>
+                  <affiliation from="2014-11-04" ref="#group.ZZS" role="MP" to="2018-03-01"/>
+               </person>
+               <person xml:id="GoldbergaInga">
+                  <persName>
+                     <surname>Goldberga</surname>
+                     <forename>Inga</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-12-06" ref="#group.SASKAŅA" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-12-06" ref="#group.SASKAŅA" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="StraujumaLaimdota">
+                  <persName>
+                     <surname>Straujuma</surname>
+                     <forename>Laimdota</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2014-11-05" ref="#group.VIENOTĪBA" role="member" to="2018-11-01"/>
+                  <affiliation from="2014-11-05" ref="#group.VIENOTĪBA" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="HarjuAstrīda">
+                  <persName>
+                     <surname>Harju</surname>
+                     <forename>Astrīda</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2017-10-19" ref="#group.VIENOTĪBA" role="member" to="2018-10-11"/>
+                  <affiliation from="2017-10-19" ref="#group.VIENOTĪBA" role="MP" to="2018-10-11"/>
+               </person>
+               <person xml:id="KučinskisMāris">
+                  <persName>
+                     <surname>Kučinskis</surname>
+                     <forename>Māris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-27" ref="#group.ZZS" role="member" to="2021-01-21"/>
+                  <affiliation from="2014-11-27" ref="#group.ZZS" role="MP" to="2021-01-21"/>
+               </person>
+               <person xml:id="RasmanisArtis">
+                  <persName>
+                     <surname>Rasmanis</surname>
+                     <forename>Artis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-10-22" ref="#group.ZZS" role="member" to="2017-01-26"/>
+                  <affiliation from="2015-10-22" ref="#group.ZZS" role="MP" to="2017-01-26"/>
+               </person>
+               <person xml:id="ArnītisRingolds">
+                  <persName>
+                     <surname>Arnītis</surname>
+                     <forename>Ringolds</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+               </person>
+               <person xml:id="MelbārdeDace">
+                  <persName>
+                     <surname>Melbārde</surname>
+                     <forename>Dace</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2018-12-13" ref="#group.NA" role="member" to="2018-12-13"/>
+                  <affiliation from="2018-12-13" ref="#group.NA" role="MP" to="2018-12-13"/>
+               </person>
+               <person xml:id="KalnozolsValdis">
+                  <persName>
+                     <surname>Kalnozols</surname>
+                     <forename>Valdis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2016-03-03" ref="#group.ZZS" role="member" to="2018-11-01"/>
+                  <affiliation from="2016-03-03" ref="#group.ZZS" role="MP" to="2018-11-01"/>
+               </person>
+               <person xml:id="RancānsJuris">
+                  <persName>
+                     <surname>Rancāns</surname>
+                     <forename>Juris</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2019-01-31" ref="#group.JK" role="member" to="2021-02-04"/>
+                  <affiliation from="2019-01-31" ref="#group.JK" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="KozlovskisRihards">
+                  <persName>
+                     <surname>Kozlovskis</surname>
+                     <forename>Rihards</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-11-05" ref="#group.VIENOTĪBA" role="member" to="2014-11-05"/>
+                  <affiliation from="2014-11-05" ref="#group.VIENOTĪBA" role="MP" to="2014-11-05"/>
+                  <affiliation from="2019-03-14" ref="#group.JV" role="member" to="2020-11-24"/>
+                  <affiliation from="2019-03-14" ref="#group.JV" role="MP" to="2020-11-24"/>
+               </person>
+               <person xml:id="JansonsRitvars">
+                  <persName>
+                     <surname>Jansons</surname>
+                     <forename>Ritvars</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2015-04-23" ref="#group.NA" role="member" to="2021-01-07"/>
+                  <affiliation from="2015-04-23" ref="#group.NA" role="MP" to="2021-01-07"/>
+               </person>
+               <person xml:id="RiekstiņšSandis">
+                  <persName>
+                     <surname>Riekstiņš</surname>
+                     <forename>Sandis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2018-12-13" ref="#group.JK" role="member" to="2021-02-04"/>
+                  <affiliation from="2018-12-13" ref="#group.JK" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="ČakšaAnda">
+                  <persName>
+                     <surname>Čakša</surname>
+                     <forename>Anda</forename>
+                  </persName>
+                  <sex value="F">Sieviete</sex>
+                  <affiliation from="2019-01-10" ref="#group.ZZS" role="member" to="2019-06-20"/>
+                  <affiliation from="2019-01-10" ref="#group.ZZS" role="MP" to="2019-06-20"/>
+               </person>
+               <person xml:id="KiršteinsAleksandrs">
+                  <persName>
+                     <surname>Kiršteins</surname>
+                     <forename>Aleksandrs</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2014-12-04" ref="#group.NA" role="member" to="2021-02-04"/>
+                  <affiliation from="2014-12-04" ref="#group.NA" role="MP" to="2021-02-04"/>
+               </person>
+               <person xml:id="IesalnieksJānis">
+                  <persName>
+                     <surname>Iesalnieks</surname>
+                     <forename>Jānis</forename>
+                  </persName>
+                  <sex value="M">Vīrietis</sex>
+                  <affiliation from="2019-01-31" ref="#group.NA" role="member" to="2021-01-14"/>
+                  <affiliation from="2019-01-31" ref="#group.NA" role="MP" to="2021-01-14"/>
+               </person>
+            </listPerson>
+         </particDesc>
+         <langUsage>
+            <language ident="lv" xml:lang="lv">latvian</language>
+            <language ident="en" xml:lang="lv">angliski</language>
+            <language ident="lv" xml:lang="en">Latvian</language>
+            <language ident="en" xml:lang="en">English</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2014-11-04-264.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2014-11-05-265.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2014-11-05-266.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2014-11-06-267.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2014-11-11-270.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2014-11-13-269.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2014-11-13-271.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2014-11-18-272.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2014-11-20-273.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2014-11-27-274.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2014-12-04-275.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2014-12-11-276.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2014-12-17-278.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2014-12-18-279.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-01-15-280.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-01-22-281.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-01-29-282.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-02-05-283.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-02-12-285.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-02-19-286.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-02-26-287.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-03-05-289.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-03-12-290.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-03-19-291.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-03-26-292.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-04-16-293.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-04-23-294.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-04-23-295.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-04-30-296.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-04-30-297.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-05-04-298.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-05-07-299.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-05-14-300.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-05-21-301.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-05-28-302.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-06-03-303.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-06-04-304.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-06-11-309.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-06-18-311.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-07-08-312.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-07-08-313.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-07-09-314.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-09-03-315.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-09-10-316.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-09-17-317.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-09-24-318.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-10-01-320.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-10-08-321.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-10-15-322.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-10-22-324.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-10-29-325.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-11-03-326.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-11-05-327.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-11-12-329.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-11-18-330.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-11-19-331.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-11-26-332.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-11-30-333.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-12-03-335.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-12-10-336.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2015-12-17-337.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-01-14-338.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-01-21-339.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-01-26-340.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-01-28-341.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-02-04-342.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-02-11-344.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-02-11-345.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-02-11-346.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-02-18-347.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-02-18-348.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-02-25-349.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-03-03-350.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-03-10-352.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-03-17-353.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-03-31-355.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-03-31-356.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-04-07-357.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-04-14-358.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-04-21-359.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-04-28-360.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-05-04-361.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-05-05-362.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-05-12-364.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-05-19-365.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-05-26-366.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-06-02-368.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-06-09-370.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-06-16-371.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-09-08-373.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-09-15-374.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-09-22-375.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-09-29-376.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-10-06-378.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-10-13-379.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-10-20-380.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-10-20-381.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-10-27-382.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-10-31-383.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-11-03-384.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-11-10-385.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-11-17-386.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-11-18-387.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-11-23-388.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-12-01-389.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-12-01-390.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-12-08-391.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-12-15-392.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-12-20-393.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2016-12-22-394.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-01-12-395.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-01-19-396.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-01-26-397.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-02-02-398.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-02-02-399.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-02-09-400.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-02-16-402.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-02-23-403.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-03-02-405.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-03-09-407.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-03-15-409.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-03-16-410.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-03-23-412.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-03-30-411.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-04-06-413.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-04-20-414.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-04-27-415.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-05-04-416.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-05-11-418.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-05-18-419.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-05-25-420.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-06-01-422.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-06-08-423.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-06-15-424.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-06-22-426.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-07-13-428.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-07-13-430.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-07-21-431.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-07-21-432.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-07-27-433.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-07-28-434.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-09-07-435.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-09-14-436.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-09-21-437.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-09-28-438.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-10-05-439.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-10-12-440.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-10-19-441.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-10-25-442.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-10-26-443.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-10-26-444.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-11-02-445.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-11-09-447.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-11-16-448.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-11-18-449.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-11-22-450.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-11-23-451.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-11-23-452.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-11-30-454.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-12-07-456.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-12-14-457.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2017-12-21-458.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-01-11-459.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-01-18-460.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-01-25-461.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-02-01-462.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-02-01-463.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-02-08-464.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-02-15-465.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-02-22-468.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-03-01-469.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-03-08-472.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-03-15-473.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-03-22-474.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-04-12-475.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-04-19-476.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-04-26-477.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-05-03-479.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-05-04-478.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-05-10-480.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-05-17-481.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-05-24-483.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-05-31-484.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-06-07-486.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-06-14-487.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-06-20-488.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-06-20-489.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-06-21-490.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-09-06-491.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-09-13-492.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-09-20-493.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-09-27-494.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-10-04-495.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-10-11-496.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-10-18-497.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-10-25-498.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT12-2018-11-01-499.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2018-11-06-500.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2018-11-13-503.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2018-11-18-505.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2018-11-20-504.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2018-11-22-506.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2018-11-29-507.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2018-12-06-508.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2018-12-13-509.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2018-12-20-511.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-01-10-512.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-01-17-513.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-01-23-514.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-01-24-515.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-01-31-516.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-01-31-517.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-02-07-518.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-02-14-519.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-02-21-520.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-02-28-521.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-03-07-523.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-03-14-524.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-03-20-526.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-03-21-527.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-03-28-528.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-04-03-530.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-04-04-529.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-04-04-531.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-04-11-532.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-04-25-533.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-05-02-534.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-05-04-535.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-05-09-536.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-05-16-537.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-05-23-538.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-05-29-539.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-05-30-540.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-06-06-541.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-06-06-542.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-06-13-543.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-06-20-544.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-07-08-545.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-07-08-546.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-07-08-547.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-09-05-2005.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-09-12-2006.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-09-19-2009.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-09-26-2010.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-10-03-2011.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-10-10-2012.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-10-17-2013.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-10-24-2014.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-10-30-2015.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-10-31-2016.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-11-07-2017.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-11-13-2018.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-11-14-2019.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-11-18-2020.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-11-21-2021.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-11-21-2022.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-11-28-2023.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-12-05-2024.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-12-05-2025.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-12-12-2026.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-12-18-2027.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-12-18-2028.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-12-18-2029.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-12-19-2030.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2019-12-19-2031.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-01-09-2032.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-01-16-2033.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-01-23-2034.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-01-30-2035.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-01-30-2036.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-02-06-2037.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-02-06-2038.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-02-13-2039.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-02-20-2040.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-02-20-2041.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-02-27-2043.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-03-05-2044.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-03-05-2045.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-03-06-2046.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-03-10-2047.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-03-11-2048.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-03-12-2049.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-03-12-2051.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-03-13-2052.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-03-13-2053.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-03-16-2054.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-03-20-2055.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-03-20-2056.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-03-20-2057.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-04-02-2058.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-04-02-2059.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-04-03-2060.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-04-03-2061.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-04-03-2062.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-04-16-2063.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-04-16-2064.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-04-16-2065.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-04-23-2066.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-04-24-2067.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-04-24-2068.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-04-24-2069.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-04-30-2070.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-04-30-2071.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-04-2072.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-07-2073.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-07-2074.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-07-2075.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-14-2076.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-14-2077.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-14-2078.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-19-2079.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-21-2080.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-21-2081.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-26-2082.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-28-2083.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-29-2084.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-29-2085.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-29-2086.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-05-29-2087.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-06-02-2088.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-06-03-2089.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-06-04-2090.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-06-05-2091.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-06-09-2092.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-06-10-2093.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-06-11-2094.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-06-11-2095.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-06-16-2096.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-06-16-2097.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-06-17-2098.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-06-17-2099.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-06-18-2100.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-07-02-2101.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-07-09-2102.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-07-09-2103.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-07-09-2104.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-07-21-2105.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-07-21-2106.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-07-21-2107.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-08-18-2108.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-08-18-2109.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-09-03-2110.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-09-10-2111.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-09-17-2112.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-09-24-2113.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-09-24-2114.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-09-24-2115.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-01-2116.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-01-2117.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-01-2118.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-08-2119.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-08-2120.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-08-2121.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-15-2122.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-15-2123.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-16-2124.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-22-2125.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-22-2126.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-22-2127.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-22-2128.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-28-2129.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-29-2130.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-29-2131.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-10-29-2132.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-05-2133.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-05-2134.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-10-2135.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-12-2136.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-12-2137.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-12-2139.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-12-2140.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-18-2141.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-19-2138.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-19-2142.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-19-2143.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-19-2144.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-23-2145.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-24-2146.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-25-2149.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-25-2150.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-25-2151.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-26-2147.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-26-2154.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-27-2152.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-11-30-2155.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-01-2153.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-01-2159.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-01-2160.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-02-2163.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-03-2157.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-03-2161.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-03-2164.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-03-2165.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-03-2167.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-10-2166.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-10-2168.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-10-2169.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-17-2170.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-17-2171.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-18-2162.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-18-2172.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-18-2174.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-21-2175.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2020-12-21-2176.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-01-07-2173.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-01-07-2177.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-01-07-2178.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-01-07-2179.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-01-14-2180.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-01-14-2181.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-01-14-2182.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-01-21-2183.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-01-21-2184.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-01-28-2185.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-01-28-2186.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-02-04-2187.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-02-04-2188.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-02-04-2189.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ParlaMint-LV_PT13-2021-02-04-2190.xml"/>
+</teiCorpus>
+

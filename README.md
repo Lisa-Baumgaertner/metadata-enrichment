@@ -13,7 +13,8 @@ The second form of cross-checking entails a comparison of corpus data to data fr
 **validation** folder: contains the RelaxNG validation files of the ParlaMint project for easy access.
 
 # Metadata Enrichment
-
+- requires python SPARQLWrapper and xml.etree.ElementTree <br/>
+- requires jing for the validation <br/>
 
 # Pywikibot
 

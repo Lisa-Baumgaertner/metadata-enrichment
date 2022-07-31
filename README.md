@@ -10,6 +10,7 @@ The second form of cross-checking entails a comparison of corpus data to data fr
 code folder: contains the programs for the three parts of my thesis.  <br />
 input folder: contains the corpus files of the ParlaMint project for easier access when testing the code.  <br />
 output folder: contains the output/ the ParlaMint corpora after running the enrichment program on them.  <br />
+validation folder: contains the RelaxNg validation files of the ParlaMint project.
 
 # Metadata Enrichment
 

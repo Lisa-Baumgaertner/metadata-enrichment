@@ -28,12 +28,23 @@ in the case of wanting to run on **linguistically annotated** corpus file use: <
 - if all used files are not contained in the same directory, full paths are required.
 
 # Pywikibot
+- file in 'code' folder called: **person_bot.py** <br/>
+- requires python [SPARQLWrapper](https://github.com/RDFLib/sparqlwrapper) <br/>
+- requires [pywikibot](https://github.com/wikimedia/pywikibot) <br/>
+- the pywikibot requires configuration and username and password to the Wikidata site, a guide can be found [here](https://www.wikidata.org/wiki/Wikidata:Pywikibot_-_Python_3_Tutorial/Setting_up_Shop)
+
+running the person_bot.py: <br/>
+either in the pywikibot **core** folder, with the person_bot.py file and the ParlaMint-XX-languagecode.txt (this file is created in xmltree.py) copied into the core directory <br/>
+`python person_bot.py --infile ParlaMint-XX-nowikiid_xx.txt`
 
 
 # List of Differences
 - file in 'code' folder called: **differencesxml.py**
 - requires python [SPARQLWrapper](https://github.com/RDFLib/sparqlwrapper) and [xml.etree.ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html) <br/>
 
-call from command line using: `python differencesxml.py --infile ParlaMint-XX.xml --outfile outfile.xml --style difflist.xslt` <br/>
+call from command line using: <br/>
+`python differencesxml.py --infile ParlaMint-XX.xml --outfile outfile.xml --style difflist.xslt` <br/>
 where all parameters are required to run the program. <br/>
 **outfile.xml** can be named however the user wants, but should have **.xml** extension.
+
+- difflist.xslt should be in same folder as the other files or specified with path.

@@ -17,9 +17,14 @@ The second form of cross-checking entails a comparison of corpus data to data fr
 - requires [jing](https://relaxng.org/jclark/jing.html) for the validation <br/>
 
 call on command line with:
-`python xmltree.py --infile ParlaMint-IS.xml --validation ParlaMint-teiCorpus.rng`
+`python xmltree.py --infile ParlaMint-XX.xml --validation ParlaMint-teiCorpus.rng`
 
-if parameter **--outfile** is not specified the enriched corpus file is automatically written to a file named: e.g. ParlaMint-IS_out.xml
+if parameter **--outfile** is not specified the enriched corpus file is automatically written to a file named: e.g. ParlaMint-XX_out.xml
+
+in the case of wanting to run on linguistically annotated corpus file use:
+`python xmltree.py --infile ParlaMint-XX.ana.xml --validation ParlaMint-teiCorpus.ana.rng`
+
+if all used files are not contained in the same directory, full paths are required.
 
 # Pywikibot
 

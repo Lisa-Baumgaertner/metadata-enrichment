@@ -14,7 +14,12 @@ The second form of cross-checking entails a comparison of corpus data to data fr
 
 # Metadata Enrichment
 - requires python [SPARQLWrapper](https://github.com/RDFLib/sparqlwrapper) and [xml.etree.ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html) <br/>
-- requires [jing] (https://relaxng.org/jclark/jing.html) for the validation <br/>
+- requires [jing](https://relaxng.org/jclark/jing.html) for the validation <br/>
+
+call on command line with:
+`python xmltree.py --infile ParlaMint-IS.xml --validation ParlaMint-teiCorpus.rng`
+
+if parameter **--outfile** is not specified the enriched corpus file is automatically written to a file named: e.g. ParlaMint-IS_out.xml
 
 # Pywikibot
 
